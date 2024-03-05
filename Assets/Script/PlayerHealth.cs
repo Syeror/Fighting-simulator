@@ -7,6 +7,8 @@ public class PlayerHealth : MonoBehaviour
     public float value;
     public RectTransform ValueRectTransform;
     public float _maxValue;
+    public GameObject GameplayUI;
+    public GameObject GameOverScreen;
     private void Start()
     {
         _maxValue = value;
@@ -18,7 +20,7 @@ public class PlayerHealth : MonoBehaviour
         value -= damage;
         if (value <= 0)
         {
-            Destroy(gameObject);
+            PlayerIsDead();
         }
         DrawHealthBar();
 
@@ -26,6 +28,15 @@ public class PlayerHealth : MonoBehaviour
     private void DrawHealthBar()
     {
         ValueRectTransform.anchorMax = new Vector2(value / _maxValue, 1);
+
+    }
+    private void PlayerIsDead()
+    {
+          GameplayUI.SetActive(false);
+            GameOverScreen.SetActive(true);
+            GetComponent<PlayerController>().enabled = false;
+            GetComponent<fireballCaster>().enabled = false;
+            GetComponent<CameraRotation>().enabled = false;
 
     }
 }
