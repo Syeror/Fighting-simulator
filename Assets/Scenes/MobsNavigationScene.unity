@@ -576,6 +576,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &539931029 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2409319448761525140, guid: 61a150f505acf564b83d686995568748, type: 3}
+  m_PrefabInstance: {fileID: 1985696518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &539931031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539931029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1c23abe9ef14a49aa00dcbdd2c7643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrenadePrefab: {fileID: 0}
+  GrenadeSourseTransform: {fileID: 0}
+  Force: 10
 --- !u!1 &607411961
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,6 +627,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &610740828 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5903955540183663262, guid: 61a150f505acf564b83d686995568748, type: 3}
+  m_PrefabInstance: {fileID: 1985696518}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &727821209
 GameObject:
   m_ObjectHideFlags: 0
@@ -2289,6 +2314,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2409319448761525140, guid: 61a150f505acf564b83d686995568748, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3245476670434797540, guid: 61a150f505acf564b83d686995568748, type: 3}
       propertyPath: FireballPrefab
       value: 
@@ -2297,6 +2326,10 @@ PrefabInstance:
       propertyPath: CameraLink
       value: 
       objectReference: {fileID: 1566333378}
+    - target: {fileID: 4313913697117504873, guid: 61a150f505acf564b83d686995568748, type: 3}
+      propertyPath: TargetPoint
+      value: 
+      objectReference: {fileID: 610740828}
     - target: {fileID: 4490512551521083895, guid: 61a150f505acf564b83d686995568748, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2313,6 +2346,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7126097238914344965, guid: 61a150f505acf564b83d686995568748, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1781533161}
+    - targetCorrespondingSourceObject: {fileID: 2409319448761525140, guid: 61a150f505acf564b83d686995568748, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 539931031}
   m_SourcePrefab: {fileID: 100100000, guid: 61a150f505acf564b83d686995568748, type: 3}
 --- !u!1 &2002234200
 GameObject:
