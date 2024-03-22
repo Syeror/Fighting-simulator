@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -9,6 +10,9 @@ public class fireball : MonoBehaviour
     public float Speed;
     private Vector3 _MoveVector;
     private bool ChekerOncolisionAnotherobject;
+    public float cooldown;
+    private float cooldownTimer;
+
     public float lifetime;
     public float  Damage = 10;
 

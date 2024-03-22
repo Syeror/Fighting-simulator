@@ -16,7 +16,7 @@ public class Explosion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.localScale = Vector3.zero * Time.deltaTime * Speed;
+        transform.localScale += Vector3.one * Time.deltaTime * Speed;
 
         if (transform.localScale.x > MaxSize)
         {

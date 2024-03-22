@@ -6,6 +6,7 @@ using UnityEngine.SocialPlatforms;
 public class Grenade : MonoBehaviour
 
 {
+    public float damage = 50;
     public float Delay = 3.0f;
     public GameObject ExplosionPrefab;
    
@@ -22,9 +23,11 @@ public class Grenade : MonoBehaviour
     private void Explosion()
     {
         Destroy(gameObject);
-        var explosion = Instantiate(ExplosionPrefab);
-        explosion.transform.position = transform.position;
-    }
+      var explosion = Instantiate(ExplosionPrefab);
+      explosion.transform.position = transform.position;
+        explosion.GetComponent<Explosion>().damage = damage;
+
+    }  
 
 
     // Start is called before the first frame update
