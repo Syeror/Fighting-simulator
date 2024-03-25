@@ -35,7 +35,7 @@ public class GravityGun : MonoBehaviour
         {
             //если есть зафиксированный объект, перемещаем объект в точку пушки каждый кадр
             _target.transform.position = transform.position;
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.R)|| Input.GetKeyDown(KeyCode.Q))
             {
                 //если нажата левая кнопка мыши, отпускаем объект
                 ReleaseTarget();

@@ -10,9 +10,6 @@ public class fireball : MonoBehaviour
     public float Speed;
     private Vector3 _MoveVector;
     private bool ChekerOncolisionAnotherobject;
-    public float cooldown;
-    private float cooldownTimer;
-
     public float lifetime;
     public float  Damage = 10;
 

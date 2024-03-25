@@ -10,10 +10,16 @@ public class enemyHealth : MonoBehaviour
     public float value;
     public PlayerProgress playerProgress;
     public TextMeshProUGUI CountDestroyed;
-    
+    public int totalEnemies;
+    public int enemiesCount;
+    public static List<enemyHealth> enemies = new List<enemyHealth>();
     public void Start()
     {
-        
+
+        totalEnemies = enemies.Count;
+        OnEnable();
+       enemiesCount = enemies.Count;
+
     }
     private void Update()
     {
@@ -30,8 +36,11 @@ public class enemyHealth : MonoBehaviour
         if (value <= 0)
         {
             Destroy(gameObject);
-            Score++;
+            GameManager.Instance.OnEnemyKilled();
+           Score++;
             UpdateKillCountText();
+            OnDisable();
+            EnemyKilled();
 
 
         }
@@ -41,6 +50,25 @@ public class enemyHealth : MonoBehaviour
         if (CountDestroyed != null)
         {
             CountDestroyed.text =  Score.ToString();
+
         }
+    }
+    public void EnemyKilled()
+    {
+        totalEnemies--;
+
+        if (totalEnemies <= 0)
+        {
+            // Вызов функции победы
+
+        }
+    }
+    private void OnEnable()
+    {
+        enemies.Add(this);
+    }
+    private void OnDisable()
+    {
+        enemies.Remove(this);
     }
 }
